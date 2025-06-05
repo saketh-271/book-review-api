@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "BookReviewAPI",
+    "_postman_id": "1",
+    "description": "API for Book Review",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"test123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/auth/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "auth",
+            "signup"
+          ]
+        }
+      }
+    }
+  ]
+}
