@@ -45,3 +45,35 @@ This is a RESTful API built with Node.js and Express for managing books and revi
    ```bash
    git clone https://github.com/your-username/book-review-api.git
    cd book-review-api
+
+## 📦 Database Schema
+
+The application uses a MongoDB database with the following collections:
+
+### 1. Users
+
+| Field      | Type     | Description                    |
+|------------|----------|--------------------------------|
+| _id      | ObjectId | Unique user ID (auto-generated)|
+| username | String   | User’s name                    |
+| email    | String   | User email                     |
+| password | String   | Hashed password                |
+
+### 2. Books
+
+| Field        | Type     | Description                    |
+|--------------|----------|--------------------------------|
+| _id        | ObjectId | Unique book ID                 |
+| title      | String   | Title of the book              |
+| author     | String   | Author of the book             |
+| description| String   | Book description               |
+
+### 3. Reviews
+
+| Field      | Type     | Description                     |
+|------------|----------|---------------------------------|
+| _id      | ObjectId | Unique review ID                |
+| bookId   | ObjectId | Reference to the book           |
+| userId   | ObjectId | Reference to the user           |
+| rating   | Number   | Rating given by the user        |
+| comment  | String   | User’s comment about the book   |
